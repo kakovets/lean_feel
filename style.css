@@ -3,8 +3,22 @@
     padding: 0;
 }
 
+:root {
+    --light-grey: #D7D7D7;
+    --pink: #E64BFF;
+  } 
+
 body {
     font-family: "Alegreya", serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
 }
 
 header {
@@ -13,7 +27,7 @@ header {
     color: #000;
     background: linear-gradient(to right, #F494FD, white);
     font-size: 32px;
-    border-bottom: 2px solid #D7D7D7;
+    border-bottom: 2px solid var(--light-grey);
     margin-bottom: 42px;
 }
 
@@ -49,7 +63,7 @@ header {
 }
 
 .cta-back {
-    background-color: #E64BFF;
+    background-color: var(--pink);
     text-align: center;
     padding: 10px;
     border-radius: 30px;
@@ -69,7 +83,7 @@ main {
 
 }
 
-.main-att {
+.row {
     display: flex;
 }
 
@@ -109,7 +123,7 @@ h2 {
     margin-bottom: 36px;
 }
 
-ul {
+ul.main-att-list {
     list-style-type: none;
     font-size: 24px; 
     display: flex; 
@@ -117,7 +131,49 @@ ul {
     gap: 12px;
 }
 
-ul li:before { content:"\2713"; }
+
+ul.main-att-list li::before {
+    content: "\2713";
+}
+
+ul.footer-list {
+    font-size: 16px; 
+    list-style-type: none;
+    display: flex; 
+    flex-direction: column; 
+    gap: 16px;
+}
+
+ul.footer-list li a {
+    text-decoration: none; 
+}
+
+ul.footer-list li a:hover {
+    text-decoration: underline;
+}
+
+p.more-reviews {
+    text-align: end; 
+    padding-top: 8px;
+    color: var(--pink);
+}
+
+button.more-reviews {
+    border: none;
+    background-color: white;
+    text-align: end; 
+    padding-top: 8px;
+    color: var(--pink);
+}
+
+button.email {
+    border: none; 
+    background-color: var(--pink); 
+    color: white; 
+    border-radius: 8px; 
+    text-align: center; 
+    cursor: pointer;
+}
 
 .divider {
     display: block;
@@ -200,7 +256,7 @@ footer {
     color: #000;
     background: #F2F2F2;
     font-size: 16px;
-    border-top: 2px solid #D7D7D7;
+    border-top: 2px solid var(--light-grey);
     padding: 40px 0; 
 }
 
