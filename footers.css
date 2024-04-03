@@ -1,0 +1,144 @@
+
+/* ################################## FOOTER ################################## */
+
+.footer1 {
+    width: 100%;
+    color: #000;
+    background: #f2f2f2;
+    border-top: 2px solid var(--light-grey);
+    margin-top: 4rem;
+  }
+  
+  .footer2 {
+    display: none;
+    width: 100%;
+    color: #000;
+    background: #f2f2f2;
+    border-top: 2px solid var(--light-grey);
+    margin-top: 6.5rem;
+  }
+  
+  .footer3 {
+    display: none;
+    width: 100%;
+    color: #000;
+    background: #f2f2f2;
+    border-top: 2px solid var(--light-grey);
+    margin-top: 6.5rem;
+  }
+  
+  .footer-global {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+  }
+  
+  .footer-contents {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .footer-link {
+    text-decoration: underline;
+    padding-bottom: 20px;
+  }
+  
+  ul.footer-list {
+    flex: 1;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  ul.footer-list li a {
+    text-decoration: none;
+  }
+  
+  ul.footer-list li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-email-title {
+    font-size: 1.5rem;
+  }
+  
+  .footer-email-subtitle {
+    padding-bottom: 8px;
+  }
+  
+  .footer-email-form {
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+  }
+  
+  .footer-email-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: #aaa;
+  }
+  
+  .footer-submit-email-button {
+    border: none;
+    background-color: var(--pink);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    padding: 6px 8px;
+    font-size: 1.5rem;
+  }
+  
+  .footer-nets-title {
+    margin-right: 10px;
+  }
+  
+  .footer-nets {
+    gap: 10px;
+  }
+  
+  .footer-copyright {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 44px;
+    font-size: 0.75rem;
+  }
+
+  @media screen and (max-width: 704px) {
+  
+    .footer1 {
+      display: none;
+    }
+  
+    .footer2 {
+      display: block;
+    }
+
+  }
+  
+  @media screen and (max-width: 479px) {
+    .footer1 {
+      display: none;
+    }
+  
+    .footer2 {
+      display: none;
+    }
+  
+    .footer3 {
+      display: block;
+    }
+  
+    .header .contacts {
+      display: none;
+    }
+
+  }

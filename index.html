@@ -1,456 +1,866 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/lean_logo.png" />
     <title>LeanFeel</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-</head>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="flex align-center flex6">
+          <a href="https://kakovets.github.io/lean_feel/">
+            <img
+              class="logo"
+              src="assets/lean_logo.png"
+              alt="LeanFeel logo"
+              width="72"
+              height="72"
+            />
+          </a>
 
-<body>
-
-    <header>
-        <span class="header">
-            <div class="row-centered-vert" style="flex: 6;">
-                <a href="https://kakovets.github.io/lean_feel/">
-                    <img src="assets/lean_logo.png" alt="LeanFeel logo" width="72" height="72">
-                </a>
-                <div class="sizedbox-w-16"></div>
-                <a href="https://kakovets.github.io/lean_feel/">
-                    <div class="brand">LEAN FEEL STUDIO</div>
-                </a>
+          <a href="https://kakovets.github.io/lean_feel/">
+            <div class="brand">
+              <span class="nowrap">LEAN FEEL</span> STUDIO
             </div>
+          </a>
+        </div>
 
-            <div class="row-centered-vert" style="flex: 1;">
-                <a href="https://www.instagram.com/_lean_feel_studio_/">
-                    <img src="assets/icons/icon_inst.svg" alt="Instagram logo" width="31" height="31">
-                </a>
-                <div style="width: 10px;"></div>
-                <a href="https://t.me/sport_and_nutrition">
-                    <img src="assets/icons/icon_tg.svg" alt="Telegram logo" width="34" height="34">
-                </a>
+        <div class="flex align-center flex1 header-nets">
+          <a href="https://www.instagram.com/_lean_feel_studio_/">
+            <img
+              src="assets/icons/icon_inst.svg"
+              alt="Instagram logo"
+              width="31"
+              height="31"
+            />
+          </a>
+          <a href="https://t.me/sport_and_nutrition">
+            <img
+              src="assets/icons/icon_tg.svg"
+              alt="Telegram logo"
+              width="34"
+              height="34"
+            />
+          </a>
+        </div>
+
+        <div class="contacts flex3">
+          <a href="tel:+380738323799" class="flex align-center phone">
+            <img
+              src="assets/icons/icon_phone.svg"
+              alt="Phone"
+              width="26"
+              height="26"
+            />
+            <div class="nowrap header-contacts-phone-number">
+              +38(073)-832-37-99
             </div>
-
-            <div class="header-contacts" style="flex: 3;">
-                <a href="tel:+380738323799" class="row-centered-vert">
-                    <img src="assets/icons/icon_phone.svg" alt="Phone" width="22" height="22">
-                    <div style="width: 4px;"></div>
-                    <div>+38(073)-832-37-99</div>
-                </a>
-
-                <div class="sizedbox-h-16"></div>
-
-                <a href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7" class="row-centered-vert">
-                    <img src="assets/icons/icon_location.svg" alt="Location" width="22" height="22">
-                    <div style="width: 4px;"></div>
-                    <div>м. Київ, вул. Ратушного 21а</div>
-                </a>
+          </a>
+          <a
+            href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7"
+            class="flex align-center"
+          >
+            <img
+              src="assets/icons/icon_location.svg"
+              alt="Location"
+              width="22"
+              height="22"
+            />
+            <div class="header-contacts-address">
+              м. Київ, вул. Ратушного 21а
             </div>
+          </a>
+        </div>
 
-            <a class="cta-back" style="flex: 2;" href="">
-                <div class="cta-text">
-                    ЗАПИСАТИСЯ
-                </div>
+        <a class="cta-back flex2" href="">
+          <div class="cta-text">ЗАПИСАТИСЯ</div>
+        </a>
+
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="menu-overlay" id="menu-overlay" onclick="closeMenu()"></div>
+
+        <nav class="menu" id="menu">
+          <div class="flex align-center menu-header">
+            <span class="flex align-center">
+              <a href="https://kakovets.github.io/lean_feel/">
+                <img
+                  class="logo"
+                  src="assets/lean_logo.png"
+                  alt="LeanFeel logo"
+                  width="72"
+                  height="72"
+                />
+              </a>
+              <a href="https://kakovets.github.io/lean_feel/">
+                <span class="brand">
+                  <span class="nowrap">LEAN FEEL</span> STUDIO
+                </span>
+              </a>
+            </span>
+            <span class="close-button" onclick="closeMenu()">X</span>
+          </div>
+
+          <div style="padding: 2rem; font-size: 2rem">
+            <ul
+              class="menu-global"
+              style="list-style-type: none; padding-bottom: 20px"
+            >
+              <li>
+                <a
+                  style="
+                    color: black;
+                    padding: 1rem;
+                    border: 1px solid black;
+                    border-radius: 30px;
+                  "
+                  href="https://kakovets.github.io/lean_feel/"
+                  >Головна</a
+                >
+              </li>
+              <li><a style="color: black" href="#">Послуги</a></li>
+              <li><a style="color: black" href="#">Фото студії</a></li>
+              <li><a style="color: black" href="#">Відгуки</a></li>
+              <li><a style="color: black" href="#">Контакти</a></li>
+            </ul>
+
+            <a style="display: block" class="cta-back flex2" href="">
+              <div class="cta-text">ЗАПИСАТИСЯ</div>
             </a>
 
+            <div
+              class="contacts"
+              style="
+                margin-top: 2rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                align-items: start;
+                font-size: 1.25rem;
+              "
+            >
+              <a href="tel:+380738323799" class="flex align-center phone">
+                <img
+                  src="assets/icons/icon_phone.svg"
+                  alt="Phone"
+                  width="22"
+                  height="22"
+                />
+                <div class="nowrap">+38(073)-832-37-99</div>
+              </a>
+              <a
+                href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7"
+                class="flex align-center"
+              >
+                <img
+                  src="assets/icons/icon_location.svg"
+                  alt="Location"
+                  width="22"
+                  height="22"
+                />
+                <div>м. Київ, вул. Ратушного 21а</div>
+              </a>
+            </div>
+          </div>
+        </nav>
 
-        </span>
+        <script src="script.js"></script>
+      </div>
     </header>
 
-
     <main>
+      <section class="attention1">
+        <div class="flex gap1rem">
+          <span class="flex5">
+            <h1>Студія краси</h1>
 
-        <div class="row">
-
-            <div style="flex: 5;">
-
-                <h1>Студія краси</h1>
-
-                <div style="font-size: 32px;">
-                    для жінок, які полюбляють <i>відчувати</i> себе. В нас є:
-                </div>
-
-                <div class="sizedbox-h-16"></div>
-
-                <ul class="main-att-list">
-                    <li >
-                        Масаж
-                    </li>
-                    <li>
-                        Фітнес
-                    </li>
-                    <li>
-                        Тейпування
-                    </li>
-                    <li>
-                        Пілатес
-                    </li>
-                    <li>
-                        Стретчинг
-                    </li>
-                    <li>
-                        Тренування для діток
-                    </li>
-                </ul>
-
+            <div class="main-att-subtitle">
+              для жінок, які полюбляють <i>відчувати</i> себе. В нас є:
             </div>
 
-            <div class="sizedbox-w-16"></div>
+            <ul class="main-att-list">
+              <li>Масаж</li>
+              <li>Фітнес</li>
+              <li>Тейпування</li>
+              <li>Пілатес</li>
+              <li>Стретчинг</li>
+              <li>Тренування для діток</li>
+            </ul>
+          </span>
 
-            <img class="main-att-img" src="assets/attention/massage.webp" alt="Massage" width="424" height="458">
+          <span class="flex5 main-att-big-img-container">
+            <img
+              class="main-att-big-img"
+              src="assets/attention/massage.webp"
+              alt="Massage"
+            />
+          </span>
 
-            <div class="sizedbox-w-16"></div>
+          <span class="flex2 main-att-small-img-container">
+            <img
+              class="main-att-small-img"
+              src="assets/attention/training.webp"
+              alt="training"
+            />
+            <div class="sizedbox-h-16"></div>
+            <img
+              class="main-att-small-img"
+              src="assets/attention/taping.webp"
+              alt="taping"
+            />
+          </span>
+        </div>
 
-            <div style="flex: 2;">
-                <img class="main-att-img" src="assets/attention/training.webp" alt="training" width="160" height="216" style="vertical-align: super;">
-                <div class="sizedbox-h-16"></div>
-                <img class="main-att-img" src="assets/attention/taping.webp" alt="taping" width="160" height="216" style="vertical-align: super;">
+        <div class="flex align-center main-cta-container">
+          <div class="flex4"></div>
+          <div class="flex4">
+            <div class="main-att-sail">50% знижки на перше тренування</div>
 
+            <a href="">
+              <div class="cta-back">
+                <div class="cta-text">ЗАПИСАТИСЯ</div>
+              </div>
+            </a>
+          </div>
+          <div class="flex4"></div>
+        </div>
+      </section>
+
+      <section class="attention2">
+        <div class="main-att-image-title-container">
+          <div class="main-att-image">
+            <h1>Студія краси</h1>
+
+            <div class="main-att-subtitle">
+              для жінок, які полюбляють <i>відчувати</i> себе
             </div>
+          </div>
         </div>
 
-        <div class="sizedbox-h-36"></div>
+        <div class="main-att-sail-cta">
+          <div class="main-att-sail">50% знижки на перше тренування</div>
 
-        <div class="right-writing" style="transform: rotate(60deg); margin-top: -300px;">
-            Ти прекрасна
-        </div>
-
-        <div class="left-writing" style="transform: rotate(10deg);">
-            Вже точно час
-        </div>
-        
-        <div class="right-writing" style="transform: rotate(30deg); margin-top: 200px">
-            Літо вже скоро
-        </div>
-
-        <div class="left-writing" style="transform: rotate(-15deg); margin-top: 600px">
-            Відчуй красу, яка <br> прихована всередині тебе
-        </div>
-        
-        <div class="right-writing" style="transform: rotate(90deg); margin-top: 800px">
-            Справжня королева
-        </div>
-
-       
-        <div style="display: flex; text-align: center;">
-            <div style="flex: 4;"></div>
-            <div style="flex: 4;">
-                <div style="font-size: 20px; color: red;">
-                    50% знижки на перше тренування
-                </div>
-
-                <div class="sizedbox-h-16"></div>
-
-                <a href="" class="cta-link">
-                    <div class="cta-back">
-                        <div class="cta-text">
-                            ЗАПИСАТИСЯ
-                        </div>
-                    </div>
-                </a>
+          <a href="">
+            <div class="cta-back">
+              <div class="cta-text">ЗАПИСАТИСЯ</div>
             </div>
-            <div style="flex: 4;"></div>
+          </a>
         </div>
-        
-        <div class="sizedbox-h-60"></div>
-        <div class="divider"></div>
+      </section>
 
+      <div class="divider"></div>
+
+      <section>
         <h2>В студії ти зможеш <i>відчути</i></h2>
 
         <div class="grid-container">
-            <div class="grid-item">
-                <img class="main-att-img" src="assets/attention+/massage_cl.webp" alt="massage_cl" width="248"
-                    height="372">
-                <div class="grid-item-text">
-                    <span style="font-weight: 500;">Класичний масаж</span> - це ключ до гармонії тіла і душі
-                </div>
+          <div class="grid-item">
+            <img
+              class="main-grid-img"
+              src="assets/attention+/massage_cl.webp"
+              alt="massage_cl"
+              width="248"
+              height="372"
+            />
+            <div class="grid-item-text">
+              <span class="grid-item-text-title">Класичний масаж</span>
+              <span> - це ключ до гармонії тіла і душі</span>
             </div>
-            <div class="grid-item">
-                <img class="main-att-img" src="assets/attention+/massage_jar.webp" alt="massage_jar" width="248"
-                    height="372">
-                <div class="grid-item-text">
-                    <span style="font-weight: 500;">Баночний масаж</span> - це чарівна процедура, що принесе тобі
-                    почуття легкості і відновить твою шкіру
-                </div>
+          </div>
+          <div class="grid-item">
+            <img
+              class="main-grid-img"
+              src="assets/attention+/massage_jar.webp"
+              alt="massage_jar"
+              width="248"
+              height="372"
+            />
+            <div class="grid-item-text">
+              <span class="grid-item-text-title">Баночний масаж</span>
+              <span>
+                - це чарівна процедура, що принесе тобі почуття легкості і
+                відновить твою шкіру</span
+              >
             </div>
+          </div>
 
-            <div class="grid-item">
-                <div class="grid-item-text-end">
-                    <span style="font-weight: 500;">Стретчинг</span> - це спосіб збереження гнучкості та підтримки
-                    здоров'я суглобів і м'язів
-                </div>
-                <img class="main-att-img" src="assets/attention+/stretching.webp" alt="stretching" width="248"
-                    height="372">
+          <div class="grid-item-oppo">
+            <div class="grid-item-text-end">
+              <span class="grid-item-text-title">Стретчинг</span>
+              <span>
+                - це спосіб збереження гнучкості та підтримки здоров'я суглобів
+                і м'язів</span
+              >
             </div>
-            <div class="grid-item">
-                <div class="grid-item-text-end">
-                    <span style="font-weight: 500;">Фітнес</span> - це шлях до збалансованого життя та впевненості у
-                    собі
-                </div>
-                <img class="main-att-img" src="assets/attention+/fitness.webp" alt="fitness" width="248" height="372">
+            <img
+              class="main-grid-img"
+              src="assets/attention+/stretching.webp"
+              alt="stretching"
+              width="248"
+              height="372"
+            />
+          </div>
+          <div class="grid-item-oppo">
+            <div class="grid-item-text-end">
+              <span class="grid-item-text-title">Фітнес</span>
+              <span>
+                - це шлях до збалансованого життя та впевненості у собі</span
+              >
             </div>
+            <img
+              class="main-grid-img"
+              src="assets/attention+/fitness.webp"
+              alt="fitness"
+              width="248"
+              height="372"
+            />
+          </div>
 
-            <div class="grid-item">
-                <img class="main-att-img" src="assets/attention+/taping.webp" alt="taping" width="248" height="372">
-                <div class="grid-item-text">
-                    <span style="font-weight: 500;">Тейпування</span> - це не просто красиво, це засіб омолодження та
-                    підтягування шкіри. Це не боляче, тобі сподобається
-                </div>
+          <div class="grid-item">
+            <img
+              class="main-grid-img"
+              src="assets/attention+/taping.webp"
+              alt="taping"
+              width="248"
+              height="372"
+            />
+            <div class="grid-item-text">
+              <span class="grid-item-text-title">Тейпування</span>
+              <span>
+                - це не просто красиво, це засіб омолодження та підтягування
+                шкіри. Це не боляче, тобі сподобається</span
+              >
             </div>
-            <div class="grid-item">
-                <img class="main-att-img" src="assets/attention+/massage_cel.webp" alt="massage_cel" width="248"
-                    height="372">
-                <div class="grid-item-text">
-                    <span style="font-weight: 500;">Антицелюлітний масаж</span> - це процес, спрямований на зменшення
-                    видимості целюліту, підвищуючи тонус шкіри та покращуючи її стан
-                </div>
+          </div>
+          <div class="grid-item">
+            <img
+              class="main-grid-img"
+              src="assets/attention+/massage_cel.webp"
+              alt="massage_cel"
+              width="248"
+              height="372"
+            />
+            <div class="grid-item-text">
+              <span class="grid-item-text-title">Анти-целюлітний масаж</span>
+              <span>
+                - це процес, спрямований на зменшення видимості целюліту,
+                підвищуючи тонус шкіри та покращуючи її стан</span
+              >
             </div>
-
+          </div>
         </div>
+      </section>
 
+      <div class="divider"></div>
 
-        <div class="left-writing" style="transform: rotate(-15deg); margin-top: -100px">
-            Подруги помітять
-        </div>
-
-        <div class="right-writing" style="margin-top: 300px">
-            Кожна деталь важлива
-        </div>
-
-
-        <div class="sizedbox-h-60"></div>
-        <div class="divider"></div>
-
-
+      <section>
         <h2>Фото студії</h2>
 
-        <div>
-            <div class="row-sb">
-                <img class="main-photo-img" src="assets/photo/ph1.webp" alt="studio photo 1" width="336" height="252">
-
-                <img class="main-photo-img" src="assets/photo/ph2.webp" alt="studio photo 2" width="336" height="252">
-    
-                <img class="main-photo-img" src="assets/photo/ph3.webp" alt="studio photo 3" width="336" height="252">
-            </div>
-
-            <div class="sizedbox-h-16"></div>
-
-            <div class="row-centered-horiz">
-                <img class="main-photo-img" src="assets/photo/ph4.webp" alt="studio photo 4" width="336" height="252">
-                <img class="main-photo-img" src="assets/photo/ph5.webp" alt="studio photo 5" width="336" height="252">
-            </div>
+        <div class="main-photos-flexwrap">
+          <img src="assets/photo/ph1.webp" alt="Image 1" />
+          <img src="assets/photo/ph2.webp" alt="Image 1" />
+          <img src="assets/photo/ph3.webp" alt="Image 1" />
+          <img src="assets/photo/ph4.webp" alt="Image 1" />
+          <img src="assets/photo/ph5.webp" alt="Image 1" />
         </div>
+      </section>
 
+      <div class="divider"></div>
 
-        <div class="left-writing" style="transform: rotate(20deg); margin-top: 100px">
-            Краса - це твоя<br>найпотужніша<br>суперсила
-        </div>        
-
-
-        <div class="sizedbox-h-60"></div>
-        <div class="divider"></div>
-
+      <section>
         <h2>Відгуки</h2>
 
-        <div class="row-sb">
-            <div class="review-card">
-                <div class="row-centered-vert">
-                    <div>
-                        <img class="circle" height="55" width="55" src="assets/reviews/reviewer1.webp" alt="avatar 1">
-                    </div>
-                    <div style="font-size: 28;">
-                        Аліна Голова
-                    </div>
-                </div>
-                <div class="row-sb quotes">
-                    <div>"</div>
-                    <div>"</div>
-                </div>
-
-                <div style="font-size: 16px; padding: 0 16px;">
-                    Я просто зачарована масажем у цій студії! Професійний підхід та увага до деталей зробили цей час неперевершеним. З нетерпінням чекаю на наступний сеанс!
-                </div>
+        <div class="main-reviews-flexwrap">
+          <div class="review-card">
+            <div class="flex align-center">
+              <div>
+                <img
+                  class="main-reviews-circle-avatar"
+                  height="55"
+                  width="55"
+                  src="assets/reviews/reviewer1.webp"
+                  alt="avatar 1"
+                />
+              </div>
+              <div class="main-reviews-name">Аліна Голова</div>
+            </div>
+            <div class="main-reviews-quotes">
+              <div>"</div>
+              <div>"</div>
             </div>
 
-            <div class="review-card">
-                <div class="row-centered-vert">
-                    <div>
-                        <img class="circle" height="55" width="55" src="assets/reviews/reviewer2.webp" alt="avatar 2">
-                    </div>
-                    <div style="font-size: 28;">
-                        Галина Нот
-                    </div>
-                </div>
-                <div class="row-sb quotes">
-                    <div>"</div>
-                    <div>"</div>
-                </div>
+            <div class="main-reviews-text">
+              Я просто зачарована масажем у цій студії! Професійний підхід та
+              увага до деталей зробили цей час неперевершеним. З нетерпінням
+              чекаю на наступний сеанс!
+            </div>
+          </div>
 
-                <div style="font-size: 16px; padding: 0 16px;">
-                    В цьому місці я відчула себе. Відчула себе жінкою, королевою. Ця студія - місце, яке спонукає відчувати.
-                </div>
+          <div class="review-card">
+            <div class="flex align-center">
+              <div>
+                <img
+                  class="main-reviews-circle-avatar"
+                  height="55"
+                  width="55"
+                  src="assets/reviews/reviewer2.webp"
+                  alt="avatar 2"
+                />
+              </div>
+              <div class="main-reviews-name">Галина Нот</div>
+            </div>
+            <div class="main-reviews-quotes">
+              <div>"</div>
+              <div>"</div>
             </div>
 
-            <div class="review-card">
-                <div class="row-centered-vert">
-                    <div>
-                        <img class="circle" height="55" width="55" src="assets/reviews/reviewer3.webp" alt="avatar 3">
-                    </div>
-                    <div style="font-size: 28;">
-                        Юлія Корочка
-                    </div>
-                </div>
-                <div class="row-sb quotes">
-                    <div>"</div>
-                    <div>"</div>
-                </div>
-
-                <div style="font-size: 16px; padding: 0 16px;">
-                    Вражена енергією цієї маленької студії краси! Тренування було динамічним та ефективним. Відчула себе сильнішою і зарядженою позитивом. Все болить, але я відпочила!Обов'язково повернусь ще! 
-                </div>
+            <div class="main-reviews-text">
+              В цьому місці я відчула себе. Відчула себе жінкою, королевою. Ця
+              студія - місце, яке спонукає відчувати.
             </div>
+          </div>
+
+          <div class="review-card">
+            <div class="flex align-center">
+              <div>
+                <img
+                  class="main-reviews-circle-avatar"
+                  height="55"
+                  width="55"
+                  src="assets/reviews/reviewer3.webp"
+                  alt="avatar 3"
+                />
+              </div>
+              <div class="main-reviews-name">Юлія Корочка</div>
+            </div>
+            <div class="main-reviews-quotes">
+              <div>"</div>
+              <div>"</div>
+            </div>
+
+            <div class="main-reviews-text">
+              Вражена енергією цієї маленької студії краси! Тренування було
+              динамічним та ефективним. Відчула себе сильнішою і зарядженою
+              позитивом. Все болить, але я відпочила!Обов'язково повернусь ще!
+            </div>
+          </div>
         </div>
 
-        <p style="text-align: end; padding-top: 8px;"><a style="color: #E64BFF;" href="" >Більше відгуків</a></p>
+        <p class="main-reviews-more-container">
+          <a class="main-reviews-more" href="">Більше відгуків</a>
+        </p>
+      </section>
 
-        <div class="right-writing" style="transform: rotate(20deg); margin-top: 150px">
-            Кожен день - можливість відкрити нову сторінку свого образу
-        </div>
+      <div class="divider"></div>
 
-        <div class="sizedbox-h-60"></div>
-        <div class="divider"></div>
+      <section>
+        <div class="main-action-title">Чи готова ти <i>відчути</i> себе?</div>
 
-        <div style="text-align: center; font-size: 64px;">Чи готова ти <i>відчути</i> себе?</div>
-        <div class="sizedbox-h-36"></div>
-
-        <div style="max-width: 340px; margin: 0 auto;">
+        <div class="flex align-center main-cta-container">
+          <div class="flex4"></div>
+          <div class="flex4">
             <a href="">
-                <div class="cta-back">
-                    <div class="cta-text">
-                        ЗАПИСАТИСЯ
-                    </div>
-                </div>
+              <div class="cta-back">
+                <div class="cta-text">ЗАПИСАТИСЯ</div>
+              </div>
             </a>
+          </div>
+          <div class="flex4"></div>
         </div>
-
-        <div style="height: 82px;"></div>
-
+      </section>
     </main>
 
-    <footer>
-        <div class="footer">
-            <div style="flex: 1;">
-                <ul class="footer-list">
-                    <li>
-                        <a href="https://kakovets.github.io/lean_feel/">
-                            <img src="assets/lean_logo.png" alt="LeanFeel logo" width="72" height="72">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" >
-                            Наша історія
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Фото студії
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Політика конфіденційності
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <footer class="footer1">
+      <div class="footer-global">
+        <div class="footer-contents">
+          <ul class="footer-list">
+            <li>
+              <a href="https://kakovets.github.io/lean_feel/">
+                <img
+                  class="logo"
+                  src="assets/lean_logo.png"
+                  alt="LeanFeel logo"
+                  width="72"
+                  height="72"
+                />
+              </a>
+            </li>
+            <li>
+              <a href=""> Наша історія </a>
+            </li>
+            <li>
+              <a href=""> Фото студії </a>
+            </li>
+            <li>
+              <a href=""> Політика конфіденційності </a>
+            </li>
+          </ul>
 
-            <div style="flex: 1;">
-                <ul class="footer-list">
-                    <li>
-                        <a href="" >
-                            Послуги
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://kakovets.github.io/lean_feel/price">
-                            Прайс-лист
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Контакти
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Відгуки
-                        </a>
-                    </li>
-                    <li>
-                        <div class="row" style="align-items: center;">
-                            <div style="padding-right: 20px;">Соц. мережі:</div>
-                            <a href="https://www.instagram.com/_lean_feel_studio_/">
-                                <img src="assets/icons/icon_inst.svg" alt="Instagram logo" width="31" height="31">
-                            </a>
-                            <div style="width: 10px;"></div>
-                            <a href="https://t.me/sport_and_nutrition">
-                                <img src="assets/icons/icon_tg.svg" alt="Telegram logo" width="34" height="34">
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+          <ul class="footer-list">
+            <li>
+              <a href=""> Послуги </a>
+            </li>
+            <li>
+              <a href="https://kakovets.github.io/lean_feel/price">
+                Прайс-лист
+              </a>
+            </li>
+            <li>
+              <a href=""> Контакти </a>
+            </li>
+            <li>
+              <a href=""> Відгуки </a>
+            </li>
+            <li>
+              <div class="flex align-center footer-nets">
+                <div class="footer-nets-title">Соц. мережі:</div>
+                <a href="https://www.instagram.com/_lean_feel_studio_/">
+                  <img
+                    src="assets/icons/icon_inst.svg"
+                    alt="Instagram logo"
+                    width="31"
+                    height="31"
+                  />
+                </a>
 
-            <div style="flex: 1;">
+                <a href="https://t.me/sport_and_nutrition">
+                  <img
+                    src="assets/icons/icon_tg.svg"
+                    alt="Telegram logo"
+                    width="34"
+                    height="34"
+                  />
+                </a>
+              </div>
+            </li>
+          </ul>
 
+          <ul class="footer-list">
+            <li>
+              <div class="contacts flex3">
+                <a href="tel:+380738323799" class="flex align-center phone">
+                  <img
+                    src="assets/icons/icon_phone.svg"
+                    alt="Phone"
+                    width="22"
+                    height="22"
+                  />
+                  <div class="nowrap">+38(073)-832-37-99</div>
+                </a>
+                <a
+                  href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7"
+                  class="flex align-center"
+                >
+                  <img
+                    src="assets/icons/icon_location.svg"
+                    alt="Location"
+                    width="22"
+                    height="22"
+                  />
+                  <div>м. Київ, вул. Ратушного 21а</div>
+                </a>
+              </div>
+            </li>
 
-                <ul class="footer-list">
-                    <li>
-                        <div class="header-contacts" style="flex: 3;">
-                            <a href="tel:+380738323799" class="row-centered-vert">
-                                <img src="assets/icons/icon_phone.svg" alt="Phone" width="22" height="22">
-                                <div style="width: 4px;"></div>
-                                <div>+38(073)-832-37-99</div>
-                            </a>
-            
-                            <div class="sizedbox-h-16"></div>
-            
-                            <a href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7" class="row-centered-vert">
-                                <img src="assets/icons/icon_location.svg" alt="Location" width="22" height="22">
-                                <div style="width: 4px;"></div>
-                                <div>м. Київ, вул. Ратушного 21а</div>
-                            </a>
-                        </div>
-                    </li>
+            <li>
+              <div class="footer-email-title">Підпишись</div>
+              <div class="footer-email-subtitle">
+                та отримуй актуальні пропозиції та акції
+              </div>
 
-
-                    <li>
-                        <div style="font-size: 24;">
-                            Підпишись
-                        </div>
-                        <div style="padding-bottom: 8px;">
-                            та отримуй актуальні пропозиції та акції
-                        </div>
-
-                        <form style="border-radius: 8px; background-color: white; display: flex; align-items: center; padding: 10px 5px;">
-                            <input type="email" placeholder="Твоя електрона пошта" style="flex: 1; border: none; outline: none; background-color: inherit; color: #aaa;">
-                            <button type="submit" class="email">
-                                <div style="padding: 8px 10px; font-size: 22pxpx;">&#x27A4</div>
-                            </button>
-                        </form>
-                    </li>
-            </div>
+              <form class="footer-email-form">
+                <input
+                  class="footer-email-input"
+                  type="email"
+                  placeholder="Твоя електрона пошта"
+                />
+                <button type="submit" class="footer-submit-email-button">
+                  <div>&#x27A4;</div>
+                </button>
+              </form>
+            </li>
+          </ul>
         </div>
-
-        <div class="row-centered-horiz" style="padding-top: 44px; font-size: 12px;">
-            <div>Copyright © 2024 LEAN FEEL Studio</div>
-            <div>By: kakovets</div>
+        <div class="footer-copyright">
+          <div>Copyright © 2024 LEAN FEEL Studio</div>
+          <div>By: kakovets</div>
         </div>
+      </div>
     </footer>
 
-</body>
+    <footer class="footer2">
+      <div class="footer-global">
+        <div class="footer-contents">
+          <ul class="footer-list">
+            <li style="margin-bottom: 4rem">
+              <div class="flex align-center" style="gap: 1rem">
+                <a href="https://kakovets.github.io/lean_feel/">
+                  <img
+                    class="logo"
+                    src="assets/lean_logo.png"
+                    alt="LeanFeel logo"
+                    width="72"
+                    height="72"
+                  />
+                </a>
+                <div
+                  class="contacts"
+                  style="flex-direction: column; align-items: start"
+                >
+                  <a href="tel:+380738323799" class="flex align-center phone">
+                    <img
+                      src="assets/icons/icon_phone.svg"
+                      alt="Phone"
+                      width="22"
+                      height="22"
+                    />
+                    <div class="nowrap">+38(073)-832-37-99</div>
+                  </a>
+                  <a
+                    href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7"
+                    class="flex align-center"
+                  >
+                    <img
+                      src="assets/icons/icon_location.svg"
+                      alt="Location"
+                      width="22"
+                      height="22"
+                    />
+                    <div>м. Київ, вул. Ратушного 21а</div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href=""> Наша історія </a>
+            </li>
+            <li>
+              <a href=""> Фото студії </a>
+            </li>
+            <li>
+              <a href=""> Політика конфіденційності </a>
+            </li>
+            <li>
+              <a href=""> Відгуки </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <div class="footer-email-title">Підпишись</div>
+              <div class="footer-email-subtitle">
+                та отримуй актуальні пропозиції та акції
+              </div>
+
+              <form class="footer-email-form">
+                <input
+                  class="footer-email-input"
+                  type="email"
+                  placeholder="Твоя електрона пошта"
+                />
+                <button type="submit" class="footer-submit-email-button">
+                  <div>&#x27A4;</div>
+                </button>
+              </form>
+            </li>
+            <li>
+              <a href=""> Послуги </a>
+            </li>
+            <li>
+              <a href="https://kakovets.github.io/lean_feel/price">
+                Прайс-лист
+              </a>
+            </li>
+            <li>
+              <a href=""> Контакти </a>
+            </li>
+            <li>
+              <div class="flex align-center footer-nets">
+                <div class="footer-nets-title">Соц. мережі:</div>
+                <a href="https://www.instagram.com/_lean_feel_studio_/">
+                  <img
+                    src="assets/icons/icon_inst.svg"
+                    alt="Instagram logo"
+                    width="31"
+                    height="31"
+                  />
+                </a>
+
+                <a href="https://t.me/sport_and_nutrition">
+                  <img
+                    src="assets/icons/icon_tg.svg"
+                    alt="Telegram logo"
+                    width="34"
+                    height="34"
+                  />
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <div>Copyright © 2024 LEAN FEEL Studio</div>
+          <div>By: kakovets</div>
+        </div>
+      </div>
+    </footer>
+
+    <footer class="footer3">
+      <div class="footer-global">
+        <div class="flex align-center" style="gap: 2rem; margin-bottom: 4rem">
+          <a href="https://kakovets.github.io/lean_feel/">
+            <img
+              class="logo"
+              src="assets/lean_logo.png"
+              alt="LeanFeel logo"
+              width="72"
+              height="72"
+            />
+          </a>
+          <div
+            class="contacts"
+            style="flex-direction: column; align-items: start"
+          >
+            <a href="tel:+380738323799" class="flex align-center phone">
+              <img
+                src="assets/icons/icon_phone.svg"
+                alt="Phone"
+                width="22"
+                height="22"
+              />
+              <div class="nowrap">+38(073)-832-37-99</div>
+            </a>
+            <a
+              href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7"
+              class="flex align-center"
+            >
+              <img
+                src="assets/icons/icon_location.svg"
+                alt="Location"
+                width="22"
+                height="22"
+              />
+              <div>м. Київ, вул. Ратушного 21а</div>
+            </a>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 4rem">
+          <div class="footer-email-title">Підпишись</div>
+          <div class="footer-email-subtitle">
+            та отримуй актуальні пропозиції та акції
+          </div>
+
+          <form class="footer-email-form">
+            <input
+              class="footer-email-input"
+              type="email"
+              placeholder="Твоя електрона пошта"
+            />
+            <button type="submit" class="footer-submit-email-button">
+              <div>&#x27A4;</div>
+            </button>
+          </form>
+        </div>
+
+        <div class="footer-contents">
+          <ul class="footer-list">
+            <li>
+              <a href=""> Наша історія </a>
+            </li>
+            <li>
+              <a href=""> Фото студії </a>
+            </li>
+            <li>
+              <a href=""> Політика конфіденційності </a>
+            </li>
+            <li>
+              <a href=""> Відгуки </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <a href=""> Послуги </a>
+            </li>
+            <li>
+              <a href="https://kakovets.github.io/lean_feel/price">
+                Прайс-лист
+              </a>
+            </li>
+            <li>
+              <a href=""> Контакти </a>
+            </li>
+            <li>
+              <div class="flex align-center footer-nets">
+                <div class="footer-nets-title">Соц. мережі:</div>
+                <a href="https://www.instagram.com/_lean_feel_studio_/">
+                  <img
+                    src="assets/icons/icon_inst.svg"
+                    alt="Instagram logo"
+                    width="31"
+                    height="31"
+                  />
+                </a>
+
+                <a href="https://t.me/sport_and_nutrition">
+                  <img
+                    src="assets/icons/icon_tg.svg"
+                    alt="Telegram logo"
+                    width="34"
+                    height="34"
+                  />
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <div>Copyright © 2024 LEAN FEEL Studio</div>
+          <div>By: kakovets</div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="right-writing" style="transform: rotate(60deg); top: 5%">
+      Ти прекрасна
+    </div>
+
+    <div class="left-writing" style="transform: rotate(10deg); top: 16%">
+      Вже точно час
+    </div>
+
+    <div class="right-writing" style="transform: rotate(30deg); top: 24%">
+      Літо вже скоро
+    </div>
+
+    <div class="left-writing" style="transform: rotate(-15deg); top: 32%">
+      Відчуй красу, яка <br />прихована всередині тебе
+    </div>
+
+    <div class="right-writing" style="transform: rotate(90deg); top: 40%">
+      Справжня королева
+    </div>
+
+    <div class="left-writing" style="transform: rotate(-15deg); top: 50%">
+      Подруги помітять
+    </div>
+
+    <div class="right-writing" style="top: 60%">Кожна деталь важлива</div>
+
+    <div class="left-writing" style="transform: rotate(20deg); top: 72%">
+      Краса - це твоя<br />найпотужніша<br />суперсила
+    </div>
+
+    <div class="right-writing" style="transform: rotate(20deg); top: 85%">
+      Кожен день - можливість <br />відкрити нову сторінку <br />свого образу
+    </div>
+  </body>
 </html>

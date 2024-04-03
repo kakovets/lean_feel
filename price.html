@@ -1,358 +1,813 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Price</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="price-style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
-            rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-    </head>    
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Прайс-лист</title>
+    <link rel="stylesheet" href="price-style.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="headers.css" />
+    <link rel="stylesheet" href="footers.css" />
+    <link rel="stylesheet" href="writings.css" />
+    <link rel="icon" href="assets/lean_logo.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="flex align-center flex6">
+          <a href="https://kakovets.github.io/lean_feel/">
+            <img
+              class="logo"
+              src="assets/lean_logo.png"
+              alt="LeanFeel logo"
+              width="72"
+              height="72"
+            />
+          </a>
 
-    <header>
-        <span class="header">
-            <div class="row-centered-vert" style="flex: 6;">
-                <a href="https://kakovets.github.io/lean_feel/">
-                    <img src="assets/lean_logo.png" alt="LeanFeel logo" width="72" height="72">
-                </a>
-                <div class="sizedbox-w-16"></div>
-                <a href="https://kakovets.github.io/lean_feel/">
-                    <div class="brand">LEAN FEEL STUDIO</div>
-                </a>
+          <a href="https://kakovets.github.io/lean_feel/">
+            <div class="brand">
+              <span class="nowrap">LEAN FEEL</span> STUDIO
             </div>
+          </a>
+        </div>
 
-            <div class="row-centered-vert" style="flex: 1;">
-                <a href="https://www.instagram.com/_lean_feel_studio_/">
-                    <img src="assets/icons/icon_inst.svg" alt="Instagram logo" width="31" height="31">
-                </a>
-                <div style="width: 10px;"></div>
-                <a href="https://t.me/sport_and_nutrition">
-                    <img src="assets/icons/icon_tg.svg" alt="Telegram logo" width="34" height="34">
-                </a>
+        <div class="flex align-center flex1 header-nets">
+          <a href="https://www.instagram.com/_lean_feel_studio_/">
+            <img
+              src="assets/icons/icon_inst.svg"
+              alt="Instagram logo"
+              width="31"
+              height="31"
+            />
+          </a>
+          <a href="https://t.me/sport_and_nutrition">
+            <img
+              src="assets/icons/icon_tg.svg"
+              alt="Telegram logo"
+              width="34"
+              height="34"
+            />
+          </a>
+        </div>
+
+        <div class="contacts flex3">
+          <a href="tel:+380738323799" class="flex align-center phone">
+            <img
+              src="assets/icons/icon_phone.svg"
+              alt="Phone"
+              width="26"
+              height="26"
+            />
+            <div class="nowrap header-contacts-phone-number">
+              +38(073)-832-37-99
             </div>
-
-            <div class="header-contacts" style="flex: 3;">
-                <a href="tel:+380738323799" class="row-centered-vert">
-                    <img src="assets/icons/icon_phone.svg" alt="Phone" width="22" height="22">
-                    <div style="width: 4px;"></div>
-                    <div>+38(073)-832-37-99</div>
-                </a>
-
-                <div class="sizedbox-h-16"></div>
-
-                <a href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7" class="row-centered-vert">
-                    <img src="assets/icons/icon_location.svg" alt="Location" width="22" height="22">
-                    <div style="width: 4px;"></div>
-                    <div>м. Київ, вул. Ратушного 21а</div>
-                </a>
+          </a>
+          <a
+            href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7"
+            class="flex align-center"
+          >
+            <img
+              src="assets/icons/icon_location.svg"
+              alt="Location"
+              width="22"
+              height="22"
+            />
+            <div class="header-contacts-address">
+              м. Київ, вул. Ратушного 21а
             </div>
+          </a>
+        </div>
 
-            <a class="cta-back" style="flex: 2;" href="">
-                <div class="cta-text">
-                    ЗАПИСАТИСЯ
-                </div>
+        <a class="cta-back flex2" href="">
+          <div class="cta-text">ЗАПИСАТИСЯ</div>
+        </a>
+
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="menu-overlay" id="menu-overlay" onclick="closeMenu()"></div>
+
+        <nav class="menu" id="menu">
+          <div class="flex align-center menu-header">
+            <span class="flex align-center">
+              <a href="https://kakovets.github.io/lean_feel/">
+                <img
+                  class="logo"
+                  src="assets/lean_logo.png"
+                  alt="LeanFeel logo"
+                  width="72"
+                  height="72"
+                />
+              </a>
+              <a href="https://kakovets.github.io/lean_feel/">
+                <span class="brand">
+                  <span class="nowrap">LEAN FEEL</span> STUDIO
+                </span>
+              </a>
+            </span>
+            <span class="close-button" onclick="closeMenu()">X</span>
+          </div>
+
+          <div style="padding: 2rem; font-size: 2rem">
+            <ul
+              class="menu-global"
+              style="list-style-type: none; padding-bottom: 20px"
+            >
+              <li>
+                <a
+                  style="
+                    color: black;
+                    padding: 1rem;
+                    border: 1px solid black;
+                    border-radius: 30px;
+                  "
+                  href="https://kakovets.github.io/lean_feel/"
+                  >Головна</a
+                >
+              </li>
+              <li><a style="color: black" href="#">Послуги</a></li>
+              <li><a style="color: black" href="#">Фото студії</a></li>
+              <li><a style="color: black" href="#">Відгуки</a></li>
+              <li><a style="color: black" href="#">Контакти</a></li>
+            </ul>
+
+            <a style="display: block" class="cta-back flex2" href="">
+              <div class="cta-text">ЗАПИСАТИСЯ</div>
             </a>
 
+            <div
+              class="contacts"
+              style="
+                margin-top: 2rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                align-items: start;
+                font-size: 1.25rem;
+              "
+            >
+              <a href="tel:+380738323799" class="flex align-center phone">
+                <img
+                  src="assets/icons/icon_phone.svg"
+                  alt="Phone"
+                  width="22"
+                  height="22"
+                />
+                <div class="nowrap">+38(073)-832-37-99</div>
+              </a>
+              <a
+                href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7"
+                class="flex align-center"
+              >
+                <img
+                  src="assets/icons/icon_location.svg"
+                  alt="Location"
+                  width="22"
+                  height="22"
+                />
+                <div>м. Київ, вул. Ратушного 21а</div>
+              </a>
+            </div>
+          </div>
+        </nav>
 
-        </span>
+        <script src="script.js"></script>
+      </div>
     </header>
 
     <main>
+      <h2>Наші ціни</h2>
 
-        <h2>Наші ціни</h2>
+      <table class="table">
+        <caption>
+          Масажи
+        </caption>
+        <thead>
+          <tr>
+            <th>Вид</th>
+            <th class="duration-long">Тривалість</th>
+            <th class="duration-short">Трив.</th>
+            <th>Ціна</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Класичний масаж спини</td>
+            <td>50 хв</td>
+            <td>500 грн</td>
+          </tr>
+          <tr>
+            <td>Масаж шийно-комірцевої зони</td>
+            <td>25 хв</td>
+            <td>300 грн</td>
+          </tr>
+          <tr>
+            <td>Класичний масаж всього тіла (зони: спина, ноги, руки)</td>
+            <td>80 хв</td>
+            <td>900 грн</td>
+          </tr>
+          <tr>
+            <td>Класичний ручний + баночний</td>
+            <td>50 хв</td>
+            <td>550 грн</td>
+          </tr>
+          <tr>
+            <td>
+              Апаратний анти-целюлітний масаж (зони: живіт, сідниці, ноги)
+            </td>
+            <td>50 хв</td>
+            <td>650 грн</td>
+          </tr>
+          <tr>
+            <td>
+              Анти-целюлітний ручний + баночний (зони: живіт, сідниці, ноги)
+            </td>
+            <td>50 хв</td>
+            <td>500 грн</td>
+          </tr>
+          <tr>
+            <td>Лімфо-дренажний масаж</td>
+            <td>50 хв</td>
+            <td>1000 грн</td>
+          </tr>
+          <tr>
+            <td>Медовий масаж</td>
+            <td>40 хв</td>
+            <td>500 грн</td>
+          </tr>
+        </tbody>
+      </table>
 
-        <div class="right-writing" style="transform: rotate(60deg); margin-top: 100px;">
-            Ти прекрасна
+      <div class="divider"></div>
+
+      <table class="table trainings">
+        <caption>
+          Тренування
+        </caption>
+        <thead>
+          <tr>
+            <th>Вид</th>
+            <th class="duration-long">Тривалість</th>
+            <th class="duration-short">Трив.</th>
+            <th>Ціна (інд)</th>
+            <th>Ціна (гр)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Фітнес</td>
+            <td>60 хв</td>
+            <td>500 грн</td>
+            <td>300 грн</td>
+          </tr>
+          <tr>
+            <td>Кардіотренування</td>
+            <td>90 хв</td>
+            <td>600 грн</td>
+            <td>400 грн</td>
+          </tr>
+          <tr>
+            <td>Силове тренування</td>
+            <td>60 хв</td>
+            <td>500 грн</td>
+            <td>300 грн</td>
+          </tr>
+          <tr>
+            <td>Функціональне тренування</td>
+            <td>60 хв</td>
+            <td>500 грн</td>
+            <td>300 грн</td>
+          </tr>
+          <tr>
+            <td>Пілатес</td>
+            <td>60 хв</td>
+            <td>500 грн</td>
+            <td>300 грн</td>
+          </tr>
+          <tr>
+            <td>Стретчинг</td>
+            <td>60 хв</td>
+            <td>500 грн</td>
+            <td>300 грн</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table trainings-individual">
+        <caption>
+          Тренування індивідуальні
+        </caption>
+        <thead>
+          <tr>
+            <th>Вид</th>
+            <th class="duration-long">Тривалість</th>
+            <th class="duration-short">Трив.</th>
+            <th>Ціна (інд)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Фітнес</td>
+            <td>60 хв</td>
+            <td>500 грн</td>
+          </tr>
+          <tr>
+            <td>Кардіо-тренування</td>
+            <td>90 хв</td>
+            <td>600 грн</td>
+          </tr>
+          <tr>
+            <td>Силове тренування</td>
+            <td>60 хв</td>
+            <td>500 грн</td>
+          </tr>
+          <tr>
+            <td>Функціональне тренування</td>
+            <td>60 хв</td>
+            <td>500 грн</td>
+          </tr>
+          <tr>
+            <td>Пілатес</td>
+            <td>60 хв</td>
+            <td>500 грн</td>
+          </tr>
+          <tr>
+            <td>Стретчинг</td>
+            <td>60 хв</td>
+            <td>500 грн</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table trainings-group">
+        <caption>
+          Тренування групові
+        </caption>
+        <thead>
+          <tr>
+            <th>Вид</th>
+            <th class="duration-long">Тривалість</th>
+            <th class="duration-short">Трив.</th>
+            <th>Ціна (гр)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Фітнес</td>
+            <td>60 хв</td>
+            <td>300 грн</td>
+          </tr>
+          <tr>
+            <td>Кардіо-тренування</td>
+            <td>90 хв</td>
+            <td>400 грн</td>
+          </tr>
+          <tr>
+            <td>Силове тренування</td>
+            <td>60 хв</td>
+            <td>300 грн</td>
+          </tr>
+          <tr>
+            <td>Функціональне тренування</td>
+            <td>60 хв</td>
+            <td>300 грн</td>
+          </tr>
+          <tr>
+            <td>Пілатес</td>
+            <td>60 хв</td>
+            <td>300 грн</td>
+          </tr>
+          <tr>
+            <td>Стретчинг</td>
+            <td>60 хв</td>
+            <td>300 грн</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="divider"></div>
+
+      <table class="table">
+        <caption>
+          Тейпування
+        </caption>
+        <thead>
+          <tr>
+            <th>Вид</th>
+            <th class="duration-long">Тривалість</th>
+            <th class="duration-short">Трив.</th>
+            <th>Ціна</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Живіт</td>
+            <td>20 хв</td>
+            <td>500 грн</td>
+          </tr>
+          <tr>
+            <td>Руки</td>
+            <td>20 хв</td>
+            <td>500 грн</td>
+          </tr>
+          <tr>
+            <td>Ноги</td>
+            <td>20 хв</td>
+            <td>500 грн</td>
+          </tr>
+          <tr>
+            <td>Спина</td>
+            <td>30 хв</td>
+            <td>600 грн</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="flex align-center main-cta-container">
+        <div class="flex4"></div>
+        <div class="flex4">
+          <a href="">
+            <div class="cta-back">
+              <div class="cta-text">ЗАПИСАТИСЯ</div>
+            </div>
+          </a>
         </div>
-
-        <div class="left-writing" style="transform: rotate(10deg); margin-top: 300px;">
-            Вже точно час
-        </div>
-
-        <div class="right-writing" style="transform: rotate(30deg); margin-top: 600px">
-            Літо вже скоро
-        </div>
-
-        <table>
-            <caption>Масажи</caption>
-            <thead>
-              <tr>
-                <th>Вид</th>
-                <th>Тривалість</th>
-                <th>Ціна</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Класичний масаж спини</td>
-                <td>50 хв</td>
-                <td>500 грн</td>
-              </tr>
-              <tr>
-                <td>Масаж шийно-комірцевої зони</td>
-                <td>25 хв</td>
-                <td>300 грн</td>
-              </tr>
-              <tr>
-                <td>Класичний масаж всього тіла (зони: спина, ноги, руки)</td>
-                <td>80 хв</td>
-                <td>900 грн</td>
-              </tr>
-              <tr>
-                <td>Класичний ручний + баночний</td>
-                <td>50 хв</td>
-                <td>550 грн</td>
-              </tr>
-              <tr>
-                <td>Апаратний антицелюлітний масаж (зони: живіт, сідниці, ноги)</td>
-                <td>50 хв</td>
-                <td>650 грн</td>
-              </tr>
-              <tr>
-                <td>Антицелюлітний ручний + баночний (зони: живіт, сідниці, ноги)</td>
-                <td>50 хв</td>
-                <td>500 грн</td>
-              </tr>
-              <tr>
-                <td>Лімфодренажний масаж</td>
-                <td>50 хв</td>
-                <td>1000 грн</td>
-              </tr>
-              <tr>
-                <td>Медовий масаж</td>
-                <td>40 хв</td>
-                <td>500 грн</td>
-              </tr>
-            </tbody>
-        </table>
-
-        <div class="divider"></div>
-
-        <div class="left-writing" style="transform: rotate(-15deg); margin-top: 200px">
-            Відчуй красу, яка <br> прихована всередині тебе
-        </div>
-        
-        <div class="right-writing" style="transform: rotate(90deg); margin-top: 500px">
-            Справжня королева
-        </div>
-
-        <table>
-            <caption>Тренування</caption>
-            <thead>
-              <tr>
-                <th>Вид</th>
-                <th>Тривалість</th>
-                <th>Ціна (інд)</th>
-                <th>Ціна (гр)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Фітнес</td>
-                <td>60 хв</td>
-                <td>500 грн</td>
-                <td>300 грн</td>
-              </tr>
-              <tr>
-                <td>Кардіотренування</td>
-                <td>90 хв</td>
-                <td>600 грн</td>
-                <td>400 грн</td>
-              </tr>
-              <tr>
-                <td>Силове тренування</td>
-                <td>60 хв</td>
-                <td>500 грн</td>
-                <td>300 грн</td>
-              </tr>
-              <tr>
-                <td>Функціональне тренування</td>
-                <td>60 хв</td>
-                <td>500 грн</td>
-                <td>300 грн</td>
-              </tr>
-              <tr>
-                <td>Пілатес</td>
-                <td>60 хв</td>
-                <td>500 грн</td>
-                <td>300 грн</td>
-              </tr>
-              <tr>
-                <td>Стретчинг</td>
-                <td>60 хв</td>
-                <td>500 грн</td>
-                <td>300 грн</td>
-              </tr>
-            </tbody>
-        </table>
-
-        <div class="divider"></div>
-
-        <div class="left-writing" style="transform: rotate(-15deg); margin-top: 200px">
-            Подруги помітять
-        </div>
-
-        <table>
-            <caption>Тейпування</caption>
-            <thead>
-              <tr>
-                <th>Вид</th>
-                <th>Тривалість</th>
-                <th>Ціна</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Живіт</td>
-                <td>20 хв</td>
-                <td>500 грн</td>
-              </tr>
-              <tr>
-                <td>Руки</td>
-                <td>20 хв</td>
-                <td>500 грн</td>
-              </tr>
-              <tr>
-                <td>Ноги</td>
-                <td>20 хв</td>
-                <td>500 грн</td>
-              </tr>
-              <tr>
-                <td>Спина</td>
-                <td>30 хв</td>
-                <td>600 грн</td>
-              </tr>
-              
-            </tbody>
-        </table>
-
-        <div style="max-width: 340px; margin: 0 auto;">
-            <a href="">
-                <div class="cta-back">
-                    <div class="cta-text">
-                        ЗАПИСАТИСЯ
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div style="height: 64px;"></div>
-
+        <div class="flex4"></div>
+      </div>
     </main>
 
-    <footer>
-        <div class="footer">
-            <div style="flex: 1;">
-                <ul class="footer-list">
-                    <li>
-                        <a href="https://kakovets.github.io/lean_feel/">
-                            <img src="assets/lean_logo.png" alt="LeanFeel logo" width="72" height="72">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" >
-                            Наша історія
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Фото студії
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Політика конфіденційності
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <footer class="footer1">
+      <div class="footer-global">
+        <div class="footer-contents">
+          <ul class="footer-list">
+            <li>
+              <a href="https://kakovets.github.io/lean_feel/">
+                <img
+                  class="logo"
+                  src="assets/lean_logo.png"
+                  alt="LeanFeel logo"
+                  width="72"
+                  height="72"
+                />
+              </a>
+            </li>
+            <li>
+              <a href=""> Наша історія </a>
+            </li>
+            <li>
+              <a href=""> Фото студії </a>
+            </li>
+            <li>
+              <a href=""> Політика конфіденційності </a>
+            </li>
+          </ul>
 
-            <div style="flex: 1;">
-                <ul class="footer-list">
-                    <li>
-                        <a href="" >
-                            Послуги
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://kakovets.github.io/lean_feel/price">
-                            Прайс-лист
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Контакти
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Відгуки
-                        </a>
-                    </li>
-                    <li>
-                        <div class="row" style="align-items: center;">
-                            <div style="padding-right: 20px;">Соц. мережі:</div>
-                            <a href="https://www.instagram.com/_lean_feel_studio_/">
-                                <img src="assets/icons/icon_inst.svg" alt="Instagram logo" width="31" height="31">
-                            </a>
-                            <div style="width: 10px;"></div>
-                            <a href="https://t.me/sport_and_nutrition">
-                                <img src="assets/icons/icon_tg.svg" alt="Telegram logo" width="34" height="34">
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+          <ul class="footer-list">
+            <li>
+              <a href=""> Послуги </a>
+            </li>
+            <li>
+              <a href="https://kakovets.github.io/lean_feel/price">
+                Прайс-лист
+              </a>
+            </li>
+            <li>
+              <a href=""> Контакти </a>
+            </li>
+            <li>
+              <a href=""> Відгуки </a>
+            </li>
+            <li>
+              <div class="flex align-center footer-nets">
+                <div class="footer-nets-title">Соц. мережі:</div>
+                <a href="https://www.instagram.com/_lean_feel_studio_/">
+                  <img
+                    src="assets/icons/icon_inst.svg"
+                    alt="Instagram logo"
+                    width="31"
+                    height="31"
+                  />
+                </a>
 
-            <div style="flex: 1;">
+                <a href="https://t.me/sport_and_nutrition">
+                  <img
+                    src="assets/icons/icon_tg.svg"
+                    alt="Telegram logo"
+                    width="34"
+                    height="34"
+                  />
+                </a>
+              </div>
+            </li>
+          </ul>
 
+          <ul class="footer-list">
+            <li>
+              <div class="contacts flex3">
+                <a href="tel:+380738323799" class="flex align-center phone">
+                  <img
+                    src="assets/icons/icon_phone.svg"
+                    alt="Phone"
+                    width="22"
+                    height="22"
+                  />
+                  <div class="nowrap">+38(073)-832-37-99</div>
+                </a>
+                <a
+                  href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7"
+                  class="flex align-center"
+                >
+                  <img
+                    src="assets/icons/icon_location.svg"
+                    alt="Location"
+                    width="22"
+                    height="22"
+                  />
+                  <div>м. Київ, вул. Ратушного 21а</div>
+                </a>
+              </div>
+            </li>
 
-                <ul class="footer-list">
-                    <li>
-                        <div class="header-contacts" style="flex: 3;">
-                            <a href="tel:+380738323799" class="row-centered-vert">
-                                <img src="assets/icons/icon_phone.svg" alt="Phone" width="22" height="22">
-                                <div style="width: 4px;"></div>
-                                <div>+38(073)-832-37-99</div>
-                            </a>
-            
-                            <div class="sizedbox-h-16"></div>
-            
-                            <a href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7" class="row-centered-vert">
-                                <img src="assets/icons/icon_location.svg" alt="Location" width="22" height="22">
-                                <div style="width: 4px;"></div>
-                                <div>м. Київ, вул. Ратушного 21а</div>
-                            </a>
-                        </div>
-                    </li>
+            <li>
+              <div class="footer-email-title">Підпишись</div>
+              <div class="footer-email-subtitle">
+                та отримуй актуальні пропозиції та акції
+              </div>
 
-
-                    <li>
-                        <div style="font-size: 24;">
-                            Підпишись
-                        </div>
-                        <div style="padding-bottom: 8px;">
-                            та отримуй актуальні пропозиції та акції
-                        </div>
-
-                        <form style="border-radius: 8px; background-color: white; display: flex; align-items: center; padding: 10px 5px;">
-                            <input type="email" placeholder="Твоя електрона пошта" style="flex: 1; border: none; outline: none; background-color: inherit; color: #aaa;">
-                            <button type="submit" class="email">
-                                <div style="padding: 8px 10px; font-size: 22pxpx;">&#x27A4</div>
-                            </button>
-                        </form>
-                    </li>
-            </div>
+              <form class="footer-email-form">
+                <input
+                  class="footer-email-input"
+                  type="email"
+                  placeholder="Твоя електрона пошта"
+                />
+                <button type="submit" class="footer-submit-email-button">
+                  <div>&#x27A4;</div>
+                </button>
+              </form>
+            </li>
+          </ul>
         </div>
-
-        <div class="row-centered-horiz" style="padding-top: 44px; font-size: 12px;">
-            <div>Copyright © 2024 LEAN FEEL Studio</div>
-            <div>By: kakovets</div>
+        <div class="footer-copyright">
+          <div>Copyright © 2024 LEAN FEEL Studio</div>
+          <div>By: kakovets</div>
         </div>
+      </div>
     </footer>
 
-</body>
+    <footer class="footer2">
+      <div class="footer-global">
+        <div class="footer-contents">
+          <ul class="footer-list">
+            <li style="margin-bottom: 4rem">
+              <div class="flex align-center" style="gap: 1rem">
+                <a href="https://kakovets.github.io/lean_feel/">
+                  <img
+                    class="logo"
+                    src="assets/lean_logo.png"
+                    alt="LeanFeel logo"
+                    width="72"
+                    height="72"
+                  />
+                </a>
+                <div
+                  class="contacts"
+                  style="flex-direction: column; align-items: start"
+                >
+                  <a href="tel:+380738323799" class="flex align-center phone">
+                    <img
+                      src="assets/icons/icon_phone.svg"
+                      alt="Phone"
+                      width="22"
+                      height="22"
+                    />
+                    <div class="nowrap">+38(073)-832-37-99</div>
+                  </a>
+                  <a
+                    href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7"
+                    class="flex align-center"
+                  >
+                    <img
+                      src="assets/icons/icon_location.svg"
+                      alt="Location"
+                      width="22"
+                      height="22"
+                    />
+                    <div>м. Київ, вул. Ратушного 21а</div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href=""> Наша історія </a>
+            </li>
+            <li>
+              <a href=""> Фото студії </a>
+            </li>
+            <li>
+              <a href=""> Політика конфіденційності </a>
+            </li>
+            <li>
+              <a href=""> Відгуки </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <div class="footer-email-title">Підпишись</div>
+              <div class="footer-email-subtitle">
+                та отримуй актуальні пропозиції та акції
+              </div>
+
+              <form class="footer-email-form">
+                <input
+                  class="footer-email-input"
+                  type="email"
+                  placeholder="Твоя електрона пошта"
+                />
+                <button type="submit" class="footer-submit-email-button">
+                  <div>&#x27A4;</div>
+                </button>
+              </form>
+            </li>
+            <li>
+              <a href=""> Послуги </a>
+            </li>
+            <li>
+              <a href="https://kakovets.github.io/lean_feel/price">
+                Прайс-лист
+              </a>
+            </li>
+            <li>
+              <a href=""> Контакти </a>
+            </li>
+            <li>
+              <div class="flex align-center footer-nets">
+                <div class="footer-nets-title">Соц. мережі:</div>
+                <a href="https://www.instagram.com/_lean_feel_studio_/">
+                  <img
+                    src="assets/icons/icon_inst.svg"
+                    alt="Instagram logo"
+                    width="31"
+                    height="31"
+                  />
+                </a>
+
+                <a href="https://t.me/sport_and_nutrition">
+                  <img
+                    src="assets/icons/icon_tg.svg"
+                    alt="Telegram logo"
+                    width="34"
+                    height="34"
+                  />
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <div>Copyright © 2024 LEAN FEEL Studio</div>
+          <div>By: kakovets</div>
+        </div>
+      </div>
+    </footer>
+
+    <footer class="footer3">
+      <div class="footer-global">
+        <div class="flex align-center" style="gap: 2rem; margin-bottom: 4rem">
+          <a href="https://kakovets.github.io/lean_feel/">
+            <img
+              class="logo"
+              src="assets/lean_logo.png"
+              alt="LeanFeel logo"
+              width="72"
+              height="72"
+            />
+          </a>
+          <div
+            class="contacts"
+            style="flex-direction: column; align-items: start"
+          >
+            <a href="tel:+380738323799" class="flex align-center phone">
+              <img
+                src="assets/icons/icon_phone.svg"
+                alt="Phone"
+                width="22"
+                height="22"
+              />
+              <div class="nowrap">+38(073)-832-37-99</div>
+            </a>
+            <a
+              href="https://maps.app.goo.gl/ojwwZc3SdsYr3Qod7"
+              class="flex align-center"
+            >
+              <img
+                src="assets/icons/icon_location.svg"
+                alt="Location"
+                width="22"
+                height="22"
+              />
+              <div>м. Київ, вул. Ратушного 21а</div>
+            </a>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 4rem">
+          <div class="footer-email-title">Підпишись</div>
+          <div class="footer-email-subtitle">
+            та отримуй актуальні пропозиції та акції
+          </div>
+
+          <form class="footer-email-form">
+            <input
+              class="footer-email-input"
+              type="email"
+              placeholder="Твоя електрона пошта"
+            />
+            <button type="submit" class="footer-submit-email-button">
+              <div>&#x27A4;</div>
+            </button>
+          </form>
+        </div>
+
+        <div class="footer-contents">
+          <ul class="footer-list">
+            <li>
+              <a href=""> Наша історія </a>
+            </li>
+            <li>
+              <a href=""> Фото студії </a>
+            </li>
+            <li>
+              <a href=""> Політика конфіденційності </a>
+            </li>
+            <li>
+              <a href=""> Відгуки </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <a href=""> Послуги </a>
+            </li>
+            <li>
+              <a href="https://kakovets.github.io/lean_feel/price">
+                Прайс-лист
+              </a>
+            </li>
+            <li>
+              <a href=""> Контакти </a>
+            </li>
+            <li>
+              <div class="flex align-center footer-nets">
+                <div class="footer-nets-title">Соц. мережі:</div>
+                <a href="https://www.instagram.com/_lean_feel_studio_/">
+                  <img
+                    src="assets/icons/icon_inst.svg"
+                    alt="Instagram logo"
+                    width="31"
+                    height="31"
+                  />
+                </a>
+
+                <a href="https://t.me/sport_and_nutrition">
+                  <img
+                    src="assets/icons/icon_tg.svg"
+                    alt="Telegram logo"
+                    width="34"
+                    height="34"
+                  />
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <div>Copyright © 2024 LEAN FEEL Studio</div>
+          <div>By: kakovets</div>
+        </div>
+      </div>
+    </footer>
+
+    <section>
+      <div class="right-writing" style="transform: rotate(60deg); top: 10%">
+        Ти прекрасна
+      </div>
+
+      <div class="left-writing" style="transform: rotate(10deg); top: 40%">
+        Вже точно час
+      </div>
+
+      <div class="right-writing" style="transform: rotate(30deg); top: 60%">
+        Літо вже скоро
+      </div>
+
+      <div class="left-writing" style="transform: rotate(-45deg); top: 75%">
+        Справжня королева
+      </div>
+    </section>
+  </body>
 </html>

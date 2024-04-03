@@ -1,0 +1,171 @@
+
+/* ################################## HEADER ################################## */
+
+.header {
+    background: linear-gradient(to right, #f494fd, white);
+    padding: 1rem 0;
+    width: 100%;
+    border-bottom: 2px solid var(--light-grey);
+    margin-bottom: 42px;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .contacts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .header-content .contacts {
+    margin: 0 10px;
+  }
+  
+  .header-nets {
+    gap: 10px;
+    margin: 0 10px;
+  }
+  
+  .phone {
+    margin-bottom: 16px;
+  }
+  
+  .contacts img {
+    margin-right: 4px;
+  }
+  
+  /* ################# burger ################# */
+  
+  .burger-menu {
+    width: 30px;
+    height: 20px;
+    display: none;
+  
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+  
+    background: linear-gradient(to bottom, #f494fd, white);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  ul.menu-global {
+    padding: 5rem;
+  }
+  
+  .menu.active {
+    transform: translateX(0);
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    margin-bottom: 20px;
+  }
+  
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .close-button {
+    color: #000;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .menu-header {
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+  }
+  
+  @media screen and (max-width: 834px) {
+    header .brand {
+      font-size: 22px;
+      margin-left: 16px;
+    }
+    header .logo {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  
+    header .contacts {
+      font-size: 14px;
+    }
+  
+    .header-nets {
+      display: none;
+    }
+    
+    .header-contacts-phone-number {
+      display: none;
+    }
+  
+    .header-contacts-address {
+      display: none;
+    }
+  
+    header .contacts {
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    header .phone {
+      margin-bottom: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 479px) {
+  
+    .header .contacts {
+      display: none;
+    }
+  
+    .header .header-content .cta-back {
+      display: none;
+    }
+  
+    .burger-menu {
+      display: flex;
+    }
+  }  

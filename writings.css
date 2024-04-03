@@ -1,0 +1,27 @@
+/* ################# writings ################# */
+
+.left-writing {
+  display: none;
+}
+
+.right-writing {
+  display: none;
+}
+
+@media screen and (min-width: 1400px) {
+  .left-writing {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc((100% - 1040px) / 2 - 160px);
+    font-family: Caveat, sans-serif;
+  }
+
+  .right-writing {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: calc((100% - 1040px) / 2 - 160px);
+    font-family: Caveat, sans-serif;
+  }
+}

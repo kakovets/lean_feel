@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Caveat:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-grey: #d7d7d7;
+  --pink: #e64bff;
+}
+
+body {
+  font-family: "Alegreya", serif;
+  position: relative;
+}
+
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 36px;
+}
+
+.cta-back {
+  background-color: var(--pink);
+  text-align: center;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.cta-text {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap1rem {
+  gap: 1rem;
+}
+
+.brand {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.logo-name {
+  flex: 6;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+.flex3 {
+  flex: 3;
+}
+
+.flex4 {
+  flex: 4;
+}
+
+.flex5 {
+  flex: 5;
+}
+
+.flex6 {
+  flex: 6;
+}
+
+.nowrap {
+  white-space: nowrap;
+}

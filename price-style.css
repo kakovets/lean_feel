@@ -1,40 +1,84 @@
-table {
-    border-collapse: collapse;
-    width: 100%;
-    font-size: 24px;
-    margin-bottom: 60px;
+table.table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.5rem;
+  margin-bottom: 60px;
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
-    border: 2px solid black;
+.trainings-individual {
+  display: none;
 }
 
-th {
-    font-weight: normal;
-    padding: 0 60px;
-    text-align: center;
-    background-color: #FFF1FF;
+.duration-short {
+  display: none;
 }
 
-caption {
-    background-color: #FFF1FF; 
-    width: min-content; 
-    padding: 4px 32px; 
-    border-radius: 20px 20px 0 0; 
-    border: 2px solid black; 
-    border-bottom: 0;
+.trainings-group {
+  display: none;
 }
 
-td:nth-child(2), td:nth-child(3), td:nth-child(4) {
-    text-align: center;
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border: 2px solid black;
 }
 
-tr:nth-child(even) {
-    background-color: #f0f0f0;
+.table th {
+  font-weight: normal;
+  padding: 0 60px;
+  text-align: center;
+  background-color: #fff1ff;
 }
 
-tr:nth-child(odd) {
-    background-color: white;
+.table caption {
+  background-color: #fff1ff;
+  width: min-content;
+  padding: 4px 32px;
+  border-radius: 20px 20px 0 0;
+  border: 2px solid black;
+  border-bottom: 0;
+}
+
+.table td:nth-child(2),
+.table td:nth-child(3),
+.table td:nth-child(4) {
+  text-align: center;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.table tr:nth-child(odd) {
+  background-color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .trainings {
+    display: none;
+  }
+
+  .trainings-individual {
+    display: table;
+  }
+
+  .trainings-group {
+    display: table;
+  }
+
+  .table th,
+  .table td {
+    padding: 1rem 2px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .duration-long {
+    display: none;
+  }
+
+  .duration-short {
+    display: table-cell;
+  }
 }
